@@ -1,0 +1,67 @@
+document.getElementById('form').addEventListener('submit',num)
+function num(e)
+{
+    e.preventDefault()
+    //add items
+    var text=document.getElementById('text').value;
+    if(text!=='')
+    {
+        var li=document.createElement('li')
+        var textnode=document.createTextNode(text)
+        document.getElementById('text').value=''
+        li.className='list-group-item'
+        li.appendChild(textnode)
+        
+        var ul=document.getElementById('ul')
+        ul.appendChild(li)
+    }
+   else
+   {
+       alert(' input field cant be empty')
+   }
+
+
+    //create button
+
+    var button =document.createElement('button')
+    var buttontext=document.createTextNode('X')
+    button.className='btn btn-danger btn-sm float-right delete'
+    button.appendChild(buttontext);
+    li.appendChild(button)
+    var ul=document.getElementById('ul')
+    ul.appendChild(li)
+
+}
+
+//delete button
+
+var deletes=document.getElementById('ul');
+deletes.addEventListener('click',remove)
+function remove(e)
+{
+    if(e.target.classList.contains('delete'))
+    {
+        var removes=e.target.parentElement;
+        deletes.removeChild(removes)
+    }
+}
+
+//filter items
+
+var filter=document.getElementById('filter').addEventListener('keyup',filt)
+function filt()
+{
+  var filtervalue=document.getElementById('filter').value.toUpperCase();
+  var lis=document.getElementsByTagName('li')
+    Array.from(lis).forEach( value=> {
+       var lisvalue=value.textContent.toUpperCase();
+       if(lisvalue.indexOf(filtervalue)>-1)
+       {
+           value.style.display=''
+       }
+       else
+       {
+           value.style.display='none'
+       }
+  });
+}

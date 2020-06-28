@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+ />
+</head>
+<body>
+  <header class='bg-success p-4 text-white'>
+         <div class="container">
+             <div class='row'>
+                  <div class='col-lg-6'>
+                      <h2>Item Lister</h2>
+                  </div>
+                  <div class='col-lg-6'>
+                        <input type='text' class='form-control' autocomplete="off" placeholder='search items...' id='filter'>
+                  </div>
+             </div>
+         </div>
+  </header>
+
+
+  <section>
+       <div class='container'>
+             <div class='card card-body m-4'> 
+                   <h2>Add Items</h2>
+                   <form class='form-inline'id='form'>
+                        <input type='text' class='form-control mr-2' id='text' autocomplete="off">
+                        <button class='btn btn-dark'>Submit</button>
+                   </form><br>
+                  <h2>Items</h2>
+                  <ul class='list-group' id='ul'>
+                        <!-- <li class='list-group-item'>item1<button class='btn btn-danger btn-sm float-right delete'>X</button></li>
+                        <li class='list-group-item'>item2<button class='btn btn-danger btn-sm float-right delete'>X</button></li>
+                        <li class='list-group-item'>item3<button class='btn btn-danger btn-sm float-right delete'>X</button></li>
+                        <li class='list-group-item'>item4<button class='btn btn-danger btn-sm float-right delete'>X</button></li> -->
+                  </ul>
+             </div>
+       </div>
+  </section>
+  <script src='demo.js'></script>
+</body>
+</html>
